@@ -73,6 +73,8 @@ jQuery(document).ready(function() {
 		'topLepersColony',
 		'topSupport',
 		'topLogout',
+		'showPurchases',
+		'showNavigation',
 	]
 	
 	var settingDefaults = [
@@ -90,6 +92,8 @@ jQuery(document).ready(function() {
 		'false',
 		'false',
 		'#fff2aa',
+		'true',
+		'true',
 		'true',
 		'true',
 		'true',
