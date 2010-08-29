@@ -345,7 +345,11 @@ SALR.prototype.updateStyling = function() {
     });
 	
 	if(this.settings.displayConfigureSalr == 'true') {
-		jQuery('#navigation li.first').next('li').next('li').after(" - <a id='configure' href='#'>Configure SALR</a>");
+        if ( this.settings.showNavigation == 'true' ) {
+            jQuery('#navigation li.first').next('li').next('li').after("- <li><a id='configure' href='#'>Configure SALR</a></li>");
+        } else {
+            jQuery('#container').before("<div style='padding: 3px; text-align: center; font-size: 10px;'><a id='configure' href='#'>Configure SALR</a></div>");
+        }
 	}
 	
 	jQuery('#configure').click(function() {
@@ -358,11 +362,6 @@ SALR.prototype.updateStyling = function() {
             jQuery(this).html('');
             jQuery(this).css('height', '0px');
         });
-
-        jQuery('ul#nav_purchase').each(function() {
-            jQuery(this).html('');
-            jQuery(this).css('height', '0px');
-        });
     }
 	
 	// Hide each top row of links
@@ -371,7 +370,7 @@ SALR.prototype.updateStyling = function() {
 			jQuery(this).remove();
 		});
 	}
-	
+    
 	if (this.settings.showNavigation == 'false') {
 		jQuery('#navigation').each(function() {
 			jQuery(this).remove();
