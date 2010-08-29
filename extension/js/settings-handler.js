@@ -34,6 +34,7 @@ jQuery(document).ready(function() {
         localStorage.setItem('salrInitialized', 'true');
     }
 
+	// Setting names.
 	var settingNames = [
 		'userQuote',
 		'darkRead',
@@ -78,6 +79,7 @@ jQuery(document).ready(function() {
 		'showNavigation',
 	]
 	
+	// Setting defaults.
 	var settingDefaults = [
 		'#a2cd5a',
 		'#6699cc',
